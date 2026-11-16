@@ -1,0 +1,5 @@
+import { AlertTriangle, ArrowUpRight, Package } from 'lucide-react'
+import { lowStock } from '../../data/mockData'
+export default function LowStockAlert() {
+  return <section className="card list-card stock-card"><div className="card-title-row"><div><h2>Low stock alerts <span className="count-pill">3</span></h2><p>Products that need restocking</p></div><a className="text-link" href="/admin/inventory">View inventory <ArrowUpRight size={14} /></a></div><div className="compact-list">{lowStock.map(product => <div className="stock-row" key={product.sku}><span className={`stock-icon ${product.color}`}><Package size={17} /></span><div className="stock-info"><strong>{product.name}</strong><small>SKU: {product.sku}</small></div><div className="stock-level"><strong className={product.stock <= 2 ? 'stock-danger' : 'stock-warn'}>{product.stock} left</strong><small>Min. {product.min}</small></div><AlertTriangle className={product.stock <= 2 ? 'alert-red' : 'alert-orange'} size={16} /></div>)}</div><button className="restock-button">Review stock levels <ArrowUpRight size={14} /></button></section>
+}

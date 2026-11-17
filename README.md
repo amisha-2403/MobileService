@@ -1,6 +1,6 @@
-# Smart Mobile Shop Admin
+# Smart Mobile Shop Admin Website
 
-Frontend-first admin dashboard for a local mobile phone shop.
+Responsive, browser-based management website for a local mobile phone shop. Native mobile app support is future scope; this project currently contains only the website.
 
 ## Run locally
 
